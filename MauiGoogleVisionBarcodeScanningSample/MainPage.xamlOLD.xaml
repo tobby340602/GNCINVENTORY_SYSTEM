@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:gv="clr-namespace:BarcodeScanner.Mobile;assembly=BarcodeScanner.Mobile.Maui"
+             x:Class="MauiGoogleVisionBarcodeScanningSample.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="20,20" >
+            <ListView x:Name="PoListview" ItemsSource="{Binding poInfItems}" HeightRequest="180" WidthRequest="700">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <AbsoluteLayout>
+                                    <Label Text="{Binding ordnum10}" AbsoluteLayout.LayoutBounds="0,0.5"
+                                                                    AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                                    <Label Text="{Binding linnum10}" AbsoluteLayout.LayoutBounds="0.1,0.5"
+                                                                    AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                                    <Label Text="{Binding delnum10}" AbsoluteLayout.LayoutBounds="0.2,0.5"
+                                                                    AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                                    <Label Text="{Binding prtnum10}" AbsoluteLayout.LayoutBounds="0.3,0.5"
+                                                                    AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                                    <Label Text="{Binding venid10}" AbsoluteLayout.LayoutBounds="0.4,0.5"
+                                                                    AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                                    <Label Text="{Binding venidName}" AbsoluteLayout.LayoutBounds="0.5,0.5"
+                                                                    AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                                    <Label Text="{Binding dueqty10}" AbsoluteLayout.LayoutBounds="0.6,0.5"
+                                                                    AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                                    <Label Text="{Binding status10}" AbsoluteLayout.LayoutBounds="0.7,0.5"
+                                                                    AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                                    <Label Text="{Binding stk10}" AbsoluteLayout.LayoutBounds="0.8,0.5"
+                                                                    AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                                    <Editor x:Name="MyEditor"
+                                      Placeholder="QTY Recv"
+                                      AbsoluteLayout.LayoutBounds="0.95,0.5, 50, 50" AbsoluteLayout.LayoutFlags="PositionProportional"
+                                      Keyboard="Numeric"/>
+                                    <ImageButton Source="close.png" Clicked="onItemClicked" AbsoluteLayout.LayoutBounds="1,0.5, 20, 20"
+                                      AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                                </AbsoluteLayout>
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button
+                x:Name="OkBtn"
+                Text="Close"
+                ToolTipProperties.Text="Click to close all PO"
+                Clicked="onBtnClose_Clicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

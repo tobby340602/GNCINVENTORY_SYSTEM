@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiGoogleVisionBarcodeScanningSample.TransferStk"
+             Title="TransferStk">
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="20,20">
+            <HorizontalStackLayout Spacing="20">
+                <Frame x:Name="PrtInfsView" BorderColor="Gray"
+                CornerRadius="10"
+                Padding="30, 20">
+                    <StackLayout>
+                        <Label Text="Information"
+                        FontSize="14"
+                        FontAttributes="Bold" />
+                        <BoxView Color="Gray"
+                        HeightRequest="2"
+                        Margin="0,5"
+                        HorizontalOptions="Fill" />
+                        <StackLayout>
+                            <HorizontalStackLayout>
+                                <Label Text=" Part number :     " FontAttributes="Bold"/>
+                                <Label x:Name="labelprtnum"/>
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout>
+                                <Label Text=" Description :     " FontAttributes="Bold"/>
+                                <Label x:Name="labeldesc1"/>
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout>
+                                <Label Text=" 2nd Desc :    " FontAttributes="Bold"/>
+                                <Label x:Name="labeldesc2"/>
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout>
+                                <Label Text=" Qty On hand :     " FontAttributes="Bold"/>
+                                <Label x:Name="labelqtyonh"/>
+                            </HorizontalStackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                <VerticalStackLayout
+                    Spacing="20">
+
+                    <Editor x:Name="Editor1"
+                      Placeholder="Transfer QTY"
+                      MaxLength="10"
+                      HorizontalTextAlignment="Center"
+                      AutoSize="TextChanges"
+                      Keyboard="Numeric"/>
+
+                    <Editor x:Name="Editor2"
+                      Placeholder="Transfer from Stock Location"
+                      HorizontalTextAlignment="Center"
+                      MaxLength="10"
+                      AutoSize="TextChanges"/>
+                    
+                    <Editor x:Name="Editor3"
+                      Placeholder="Transfer To Stock Location"
+                      MaxLength="10"
+                      HorizontalTextAlignment="Center"
+                      AutoSize="TextChanges"/>
+
+                    <Button
+                    x:Name="OkBtn"
+                    Text="Post"
+                    ToolTipProperties.Text="Click me"
+                    Clicked="onBtnPost_Clicked"
+                    />
+
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

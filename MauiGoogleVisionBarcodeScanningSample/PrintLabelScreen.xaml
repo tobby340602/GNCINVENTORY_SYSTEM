@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiGoogleVisionBarcodeScanningSample.PrintLabelScreen">
+    <ContentPage.Content>
+        
+        <Grid x:Name="MainStack" BackgroundColor="White">
+            <Image x:Name="img1" HeightRequest="150" WidthRequest="100" VerticalOptions="Start" HorizontalOptions="Start"></Image>
+            <Image x:Name="img2" HeightRequest="150" WidthRequest="100" VerticalOptions="Start" HorizontalOptions="End"></Image>
+            <StackLayout  Orientation="Vertical" VerticalOptions="Start">
+              
+            <Button HeightRequest="50" VerticalOptions="End" BackgroundColor="Purple" TextColor="White" Text="Home" Margin="10,0,5,0" Clicked="Home_Clicked"></Button>
+  
+                <Label Text="THIS END UP" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" FontSize="24" TextColor="Black"></Label>
+                <Label Text="Fragile Furniture"  FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" FontSize="18" TextColor="Black"></Label>
+                <Image x:Name="img3" HeightRequest="80" WidthRequest="150"></Image>
+                
+                <Label Text="749 kennedy street Rib lake Fax:9823708372"  VerticalOptions="Center" HorizontalOptions="Center" FontSize="12" TextColor="Black"></Label>
+                <Grid HeightRequest="150" Margin="0,20,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Orientation="Vertical" Margin="20,0,0,0">
+                        <Label Text="Ship To" TextColor="Black"></Label>
+                        <Label x:Name="lblCompanyName" Text="Pekashire Builders Inc."  FontAttributes="Bold" FontSize="16" TextColor="Black"></Label>
+                        <Label x:Name="lblCompanyAddress" Text="140 HWY H ROAD"  FontAttributes="Bold" FontSize="16" TextColor="Black"></Label>
+                    </StackLayout>
+                    <Grid Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Orientation="Vertical" Margin="0,10,0,0">
+                            <Label Text="Sales Order:" TextColor="Black" HorizontalOptions="End"></Label>
+                            <Label Text="Cust Order#:" Margin="0,5,0,0" TextColor="Black" HorizontalOptions="End"></Label>
+                            <Label Text="Job Id:" TextColor="Black" HorizontalOptions="End"></Label>
+
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" Grid.Column="1" Margin="0,10,0,0">
+                            <Label x:Name="lblSalesOrder" Text="90238023" HorizontalOptions="Start" FontAttributes="Bold" FontSize="35" TextColor="Black" ></Label>
+                            <Label x:Name="lblCustPO" Text="Mark" TextColor="Black" HorizontalOptions="Start"></Label>
+                            <Label x:Name="lblJobID" Text="" TextColor="Black" HorizontalOptions="Start"></Label>
+
+                        </StackLayout>
+
+                    </Grid>
+                </Grid>
+                <Grid Margin="0,10,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="lblCityStZip" Text="MANTIWOC ,WI 54220" FontAttributes="Bold" FontSize="14" HorizontalOptions="Center"></Label>
+                    <Label x:Name="lblShipVia" Text="Ship via:GNC TRUCK"  FontSize="12" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                </Grid>
+                <Grid HeightRequest="120" Margin="5">
+                    <ContentView HeightRequest="1" VerticalOptions="Start" BackgroundColor="Black"></ContentView>
+                    <ContentView WidthRequest="1" HorizontalOptions="Start" BackgroundColor="Black"></ContentView>
+                    <StackLayout Orientation="Vertical">
+
+                        <Grid >
+
+                            <Label x:Name="lblLinNum" Text="03" Margin="10,0,0,0" TextColor="Black"></Label>
+                            <StackLayout Orientation="Horizontal" Spacing="15" HorizontalOptions="Center">
+                                <Label x:Name="lblQTY" Text="1"  TextColor="Black"></Label>
+                                <Label x:Name="lblSlsUOM" Text="EA" TextColor="Black"></Label>
+                            </StackLayout>
+                            <Label x:Name="lblPartNumber" Text="0012-2893-3289" TextColor="Black" HorizontalOptions="End" Margin="0,0,10,0 "></Label>
+
+                        </Grid>
+                        <Label x:Name="lblPrtDesc" Text="W-3012, GL MAPLE" TextColor="Black" FontAttributes="Bold" FontSize="16" HorizontalOptions="Center"></Label>
+                        <Label x:Name="lblConfigInfo" Text="___" TextColor="Black" FontSize="14" HorizontalOptions="Center"></Label>
+                        <Label x:Name="lblOrderNotes" Text="___" TextColor="Black" FontSize="14" HorizontalOptions="Center"></Label>
+                    </StackLayout>
+                    <ContentView WidthRequest="1" HorizontalOptions="End" BackgroundColor="Black"></ContentView>
+                    <ContentView HeightRequest="1" VerticalOptions="End" BackgroundColor="Black"></ContentView>
+                </Grid>
+
+
+                <Label Text="Handle With Care" Margin="0,20,0,0" TextColor="Black" FontAttributes="Bold" FontSize="16" HorizontalOptions="Center"></Label>
+            </StackLayout>
+          
+
+              <Button HeightRequest="50" VerticalOptions="End" BackgroundColor="Purple" TextColor="White" Text="Print Shipping Label" Margin="10,0,5,0" Clicked="Save_Clicked"></Button>
+
+           
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

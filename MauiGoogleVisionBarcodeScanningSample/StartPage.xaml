@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiGoogleVisionBarcodeScanningSample.StartPage"
+             Title="StartPage">
+    <VerticalStackLayout Spacing="20" Padding="20,20" >
+        <Label 
+            Text="Welcome to here!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+
+
+        <Button Text="Receive Stock/Cose PO" x:Name="btnRecvStk" Clicked="BtnRecvStk_Clicked"/>
+        <Button Text="Transfer Stock" x:Name="btnTransStk" Clicked="BtnTransStk_Clicked"/>
+        <Button Text="Inventory Usage" x:Name="btnInvScan" Clicked="BtnInvScan_Clicked"/>
+        <Button Text="Publish PDF" x:Name="btnPdf" Clicked="BtnPDF_Clicked"/>
+
+
+
+    </VerticalStackLayout>
+</ContentPage>
